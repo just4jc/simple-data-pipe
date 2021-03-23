@@ -42,7 +42,7 @@
     "nconfig": "*",
     "node-schedule": "~0.2.9",
     "node-static": "^0.7.7",
-    "npm": "^3.5.0",
+    "npm": "^7.0.0",
     "oauth": "0.9.10",
     "passport": "~0.2.2",
     "simple-data-pipe-sdk": "^0.2.4",
