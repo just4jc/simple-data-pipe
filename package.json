@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "test": "NODE_CONFIG=tests/config/configYP ./node_modules/.bin/mocha ./tests",
-    "postinstall": "node ./node_modules/bower/bin/bower cache clean && node ./node_modules/bower/bin/bower install"
+    "postinstall": "node ./node_modules/bower/bin/bower cache clean && node ./node_modules/bower/bin/bower install",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -51,12 +53,14 @@
     "bunyan-console-stream": "^0.1.0",
     "request": "~2.58.0",
     "when": "~3.7.3",
-    "ws": "~0.7.2"
+    "ws": "~0.7.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "mocha": "*"
   },
   "author": "david_taieb@us.ibm.com",
   "license": "Apache-2.0",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "snyk": true
 }
